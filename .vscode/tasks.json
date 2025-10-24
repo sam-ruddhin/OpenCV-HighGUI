@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build OpenCV with MinGW",
+            "type": "shell",
+            "command": "C:\\Users\\samru\\Downloads\\winlibs-x86_64-posix-seh-gcc-15.2.0-mingw-w64ucrt-13.0.0-r2\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-IC:/Users/samru/Downloads/opencv/build_mingw/include",
+                "-IC:/Users/samru/Downloads/opencv/build_mingw/include/opencv2",
+                "-LC:/Users/samru/Downloads/opencv/build_mingw/lib",
+                "-lopencv_world4120"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Build OpenCV project using MinGW"
+        },
+    ]
+}
